@@ -1,18 +1,21 @@
 const server = require("./server/server")
-const socketServer = require("./server/socketServer")
 const router = require("./routing/route");
+const socketServer = require("./server/socketServer")
+
 const requestLoginHandler = require("./requestHandlers/requestLoginHandler/requestLoginHandler")
 const requestRegistrationHandler = require("./requestHandlers/requestRegistrationHandler/requestRegistrationHandler")
-const requestCreateConnection = require("./requestHandlers/requestCreateConnection/requestCreateConnection")
+const requestGetDataUserHandler = require("./requestHandlers/reqestGetDataUserHandler/getDataUser")
+const requestLogoutHandler = require("./requestHandlers/requestLogoutHandler/requestLogoutHandler")
+const requestGetAllUsers = require("./requestHandlers/requestGetAllUsersHandler/getAllUsers")
 
 handle = {}
+console.log(typeof requestGetDataUserHandler.getDataUser)
 
-handle['/'] = requestLoginHandler.auth;
-handle['/auth'] = requestLoginHandler.auth;
 handle['/registration'] = requestRegistrationHandler.registration;
-handle['/createConnection'] = requestCreateConnection.createConnection;
-
-
+handle['/auth'] = requestLoginHandler.auth;
+handle['/logout'] = requestLogoutHandler.logout;
+handle['/getDataUser'] = requestGetDataUserHandler.getDataUser;
+handle['/getAllUsers'] = requestGetAllUsers.getAllUsers;
 
 
 

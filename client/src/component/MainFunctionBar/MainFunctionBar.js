@@ -1,12 +1,9 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
-import {NavLink} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const links = [
-    {to: '/', label: 'Моя страница', exact: 'true' },
-    {to: 'auth', label: 'Авторизация', exact: 'false'},
-    {to: '/message', label: 'Мои сообщения', exact: 'false' },
-
+    {to: '/logout', label: 'Выйти', exact: true},
 ];
 
 class MainFunctionBar extends Component {
@@ -15,12 +12,12 @@ class MainFunctionBar extends Component {
         return links.map((link, index) => {
             return(
                 <li key={index}>
-                    <NavLink
+                    <Link
                         to={link.to}
                         exact={link.exact}
                     >
                     {link.label}
-                    </NavLink>
+                    </Link>
                 </li>
             )
         })

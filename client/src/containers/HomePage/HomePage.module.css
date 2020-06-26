@@ -1,0 +1,23 @@
+
+.leftSideBar li{
+    padding: 6px 8px 6px 8px;
+    margin-bottom: 5px;
+    width: 80%;
+    font-size: 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    list-style-type: none;
+    background-color: #696969;
+}
+.leftSideBar li a{
+    text-decoration: none;
+    color: #1f1f1f;
+}
+.leftSideBar ul{
+    text-decoration: none;
+}
+
+a:focus {
+    background-color: #b3b3b3;
+
+}

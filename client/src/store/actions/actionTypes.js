@@ -1,0 +1,12 @@
+export const AUTH_SUCCESS = 'AUTH_SUCCESS'
+export const AUTH_LOGOUT = 'AUTH_LOGOUT'
+
+export const GET_USER_DATA = 'GET_USER_DATA'
+export const GET_USER_DATA_START = 'GET_USER_DATA_START'
+
+export const GET_ALL_USER = 'GET_ALL_USER'
+export const GET_ALL_USER_START = 'GET_ALL_USER_START'
+
+export const DIFFIE_HELMAN = 'DIFFIE_HELMAN'
+
+export const CONNECT_TO_SOCKET = 'CONNECT_TO_SOCKET'

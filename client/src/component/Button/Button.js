@@ -1,19 +1,23 @@
-import React, { Component } from 'react'
-
-let buttonStyle = {
-  margin: '10px 10px 10px 0'
-};
+import React from 'react'
+import classes from './Button.module.css'
 
 
-class Button extends Component {
-  render() {
-    return (
-      <button
-        className="btn btn-default"
-        style={buttonStyle}
-        onClick={this.props.handleClick}>{this.props.label}</button>
+
+const Button = props => {
+  const cls = [
+    classes.Button,
+    classes[props.type]
+  ]
+
+  return (
+      <button 
+        className={cls.join(' ')}
+        onClick={props.onClick}
+        disabled={props.disabled}
+      >
+        {props.children}  
+      </button>
     );
-  }
 }
 
 export default Button

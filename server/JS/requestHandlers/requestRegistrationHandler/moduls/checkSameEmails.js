@@ -8,7 +8,7 @@ function checkSameEmails(data, collection) {
                     resolve(true)
                 } else {
                     console.log(user);
-                    resolve(false)
+                    reject(false)
                 }
             }) 
             .catch(err => console.log(err));
